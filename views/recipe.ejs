@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <title>
+        <%= recipe.title %>
+    </title>
+</head>
+<body>
+    <nav>
+        <a class = "logo" href="/">Recipe.com</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/Recipes">Recipes</a></li>
+            <li><a href="/AddRecipes">Add Recipes</a></li>
+        </ul>
+    </nav>
+    <div class ="recipeDiv">
+        <h1>
+            <%= recipe.title %>
+        </h1>
+    
+        <h2>
+            Ingredients
+        </h2>
+        <ul>
+        <% if (recipe.ingredients.length > 0) { %>
+            <% recipe.ingredients.forEach(ingredient => { %>
+                <li>
+                    <span 
+                        class="ingredient"
+                        data-fact="<%= ingredient.fact %>">
+                        <%= ingredient.name %> - <%= ingredient.quantity %>
+                    </span>
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li>No ingredients listed.</li>
+            <% } %>
+        </ul>
+        <div id="factBox" class="fact-box"></div>
+
+        <h2>
+            Instructions
+        </h2>
+        <p>
+            <%= recipe.instructions %>
+        </p>
+
+        <a href ="/recipes">Back to All</a>
+    </div>
+
+    <script src="/js/recipe.js"></script>
+</body>
+</html>
+

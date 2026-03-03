@@ -1,0 +1,213 @@
+body{
+    background-color: rgb(207, 203, 185);
+}
+
+.lists{
+    display:flex;
+    justify-content: center;
+    gap: 29px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 1cm;
+      margin-left: 10cm;
+    margin-right: 10cm;
+     min-height: 100vh;
+    background-color: rgb(170, 177, 162);
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #fffefa;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: rgb(229, 205, 28);
+  font-size: 44px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav .logo:hover {
+  color: hsl(53, 79%, 60%);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: rgb(96, 136, 31);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul li a:hover {
+  color: rgb(166, 233, 59);
+}
+
+.anecdote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2cm;
+    padding-right: 2cm;
+    
+    min-height: 100vh;
+    background-color: rgb(188, 174, 200);
+    margin-left: 10cm;
+    margin-right: 10cm;
+}
+
+.anecdote p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2cap;
+    color: rgb(0, 0, 0);
+    padding-top: 5cm;
+    text-align: center;
+}
+
+.anecdote a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 4cap;
+    color: rgb(0, 96, 30);
+    text-align: center;
+    margin-top: 2cm;
+    text-decoration: none;
+}
+
+.anecdote a:hover{
+   
+    font-weight:bolder;
+    color: rgb(43, 232, 137);
+    
+}
+
+.currentPage{
+    text-decoration: underline;
+}
+
+.recipeDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10cm;
+    margin-right: 10cm;
+    min-height: 100vh;
+    background-color: beige;
+
+}
+
+.AddDiv{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10cm;
+    margin-right: 10cm;
+     min-height: 100vh;
+
+}
+
+/* ingredient row styling */
+.ingredient-row{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.ingredient-row select,
+.ingredient-row input{
+    padding: 6px 8px;
+    font-size: 1em;
+}
+.remove-row{
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 4px;
+}
+#add-row{
+    margin-top: 6px;
+    padding: 6px 12px;
+    font-size: 1em;
+}
+
+
+
+
+
+
+.fact-box {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    display: none;
+    width: fit-content;
+}
+
+/* Search input styles */
+#searchInput{
+  display: block;
+  margin: 18px auto;
+  width: 60%;
+  max-width: 600px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+
+.lists > div h2{
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.list{
+  list-style: none;
+  padding: 10px;
+  min-width: 180px;
+}
+
+.list li{
+  margin: 6px 0;
+}
+
+.list li a{
+  color: rgb(0, 96, 30);
+  text-decoration: none;
+}
+
+.list li a:hover{
+  text-decoration: underline;
+}
+
+.ingredient {
+  color: rgb(0, 96, 30);
+  font-weight: 500;
+}

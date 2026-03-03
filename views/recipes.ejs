@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <nav>
+        <a class = "logo" href="/">Recipe.com</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a class="currentPage" href="/Recipes">Recipes</a></li>
+            <li><a  href="/AddRecipes">Add Recipes</a></li>
+        </ul>
+    </nav>
+
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search recipes..."
+    >
+    
+    <div class = "lists">
+        
+        <div>
+             <h2>
+                Beef Recipes
+            </h2>
+            <ul id = "BeefList" class = "list">
+                <% groupedRecipes.Beef.forEach(recipe => { %>
+                    <li>
+                    <a href="/recipe/<%= recipe.id %>">
+                        <%= recipe.title %>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+
+         <div>
+             <h2>
+                Chicken Recipes
+            </h2>
+            <ul id = "ChickenList" class = "list">
+                <% groupedRecipes.Chicken.forEach(recipe => { %>
+                    <li>
+                    <a href="/recipe/<%= recipe.id %>">
+                        <%= recipe.title %>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+
+         <div>
+             <h2>
+                Beans Recipes
+            </h2>
+            <ul id = "BeansList" class = "list">
+                <% groupedRecipes.Beans.forEach(recipe => { %>
+                    <li>
+                    <a href="/recipe/<%= recipe.id %>">
+                        <%= recipe.title %>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+
+        <div>
+             <h2>
+                Other Recipes
+            </h2>
+            <ul id = "OtherList" class = "list">
+                <% groupedRecipes.Other.forEach(recipe => { %>
+                    <li>
+                    <a href="/recipe/<%= recipe.id %>">
+                        <%= recipe.title %>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+       
+
+
+
+    </div>
+    
+    <script src="/js/index.js"></script>
+</body>
+</html>

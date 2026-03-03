@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciMe</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <a class = "logo" href="/">Recipe.com</a>
+        <ul>
+            <li><a  href="/">Home</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+            <li><a class="currentPage" href="/AddRecipes">Add Recipes</a></li>
+        </ul>
+    </nav>
+    
+        <div class = "AddDiv">
+
+    <h1>Add a New Recipe</h1>
+
+    <form action="/recipes" method="POST">
+
+    <label>Title:</label>
+    <input type="text" name="title" required>
+    <br><br>
+
+    <label>Category:</label>
+    <select name="category" required>
+        <option value="Beef">Beef</option>
+        <option value="Chicken">Chicken</option>
+        <option value="Beans">Beans</option>
+        <option value="Other">Other</option>
+    </select>
+    <br><br>
+
+    <label>Instructions:</label><br>
+    <textarea name="instructions" rows="5" required></textarea>
+    <br><br>
+
+    <h3>Ingredients</h3>
+    <div id="ingredient-container">
+        <div class="ingredient-row">
+            <select name="ingredient_id[]" required>
+                <option value="">-- choose ingredient --</option>
+                <% ingredients.forEach(ing => { %>
+                    <option value="<%= ing.id %>" title="<%= ing.fact %>"><%= ing.name %></option>
+                <% }) %>
+            </select>
+            <input type="text" name="quantity[]" placeholder="Quantity">
+            <button type="button" class="remove-row">Remove Row</button>
+        </div>
+    </div>
+    <button type="button" id="add-row">Add another ingredient</button>
+    <br><br>
+    <button type="submit">Add Recipe</button>
+
+    </form>
+    </div>
+
+    <script src="/js/addrecipes.js"></script>
+   
+   
+</body>
+</html>
