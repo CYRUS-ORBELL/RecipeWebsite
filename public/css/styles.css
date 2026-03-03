@@ -8,8 +8,7 @@ body{
     gap: 29px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 1cm;
-      margin-left: 10cm;
-    margin-right: 10cm;
+      
      min-height: 100vh;
     background-color: rgb(170, 177, 162);
 }
